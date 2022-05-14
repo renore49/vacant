@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	margin: 0rem 5rem;
+	background: #000928;
+}
+
+.NavBar {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	display: flex;
+	height: 110px;
+	padding: 0rem 5rem;
+	z-index: 100;
+	align-items: center;
+	background: #000928;
+}
+.NavBarNav {
+	width: 100%;
+	overflow-y: hidden;
+}
+.NavBarDiv {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.TextHeader {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 3.438rem;
+	color: #ffffff;
+	cursor: pointer;
+}
+.NavBarComponents {
+	display: flex;
+	gap: 2rem;
+	height: 3.438rem;
+	align-items: center;
+	margin-left: 31rem;
+}
+@media (max-width: 1440px) {
+	.NavBarComponents {
+		display: flex;
+		gap: 1.75rem;
+		height: 3.438rem;
+		align-items: center;
+		margin-left: 27.188rem;
+	}
+}
+.NavBarNavigation {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 0.938rem;
+	line-height: 1.125rem;
+	color: #ffff;
+	cursor: pointer;
+}
+.NavBarInput {
+	width: 18.625rem;
+	padding: 0 1.25rem;
+	height: 1.938rem;
+	color: rgb(232, 229, 229);
+	border: 1px solid #ffffff;
+	border-radius: 1.25rem;
+	margin: 0rem 1.063rem 0rem 0.75rem;
+	background: rgba(255, 255, 255, 0.2) url('./assets/svg/search-normal.svg') 95%
+		center no-repeat;
+	filter: drop-shadow(0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+.mainPage {
+	display: flex;
+	flex-direction: column;
+}
+.mainText {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 96px;
+	line-height: 110px;
+	color: #ffffff;
+	width: 774px;
+	margin: 140px 0px 20px 0px;
+}
+.mainP {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+	color: #ffffff;
+	width: 843px;
+}
+.mainButton {
+	width: 297px;
+	height: 57px;
+	color: #000928;
+	background: #ffc700;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	font-family: 'Ubuntu';
+	border-radius: 40px;
+	cursor: pointer;
+	margin-top: 50px;
+	margin-bottom: 90px;
+}
+
+/* Spinner */
+.loadingSpinnerContainer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 5000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loadingSpinner {
+	width: 40px;
+	height: 40px;
+	border: 4px solid;
+	border-color: #ffffff transparent #ffffff transparent;
+	border-radius: 50%;
+	animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.userAdd {
+	cursor: pointer;
+}
+
+/* signUp */
+/* .modal {
+	width: 100vw;
+	height: 100vh;
+	background-color: #0005;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+.signUpContainer {
+	margin-top: 150px;
+	background: #ffffff;
+	/* padding: 80px;
+	border-radius: 5px; */
+}
+.signUpHeader {
+	margin-left: 350px;
+	padding-top: 100px;
+}
+.signUpHeaderText {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 37px;
+}
+.signUpHeaderText2 {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	opacity: 0.5;
+}
+.signUpPage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.inputNameDiv,
+.emailInputDiv,
+.passwordInputDiv {
+	margin-bottom: 50px;
+}
+.nameInput,
+.emailInput,
+.passwordInput {
+	width: 414px;
+	height: 63px;
+	background: #000928;
+	color: #ffffff;
+	border-radius: 38px;
+	padding: 0 35px;
+	font-size: medium;
+}
+.signUpComponents {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: #000928;
+}
+.signUpButtonDiv {
+	display: flex;
+	width: 414px;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.signUpButton {
+	width: 264px;
+	height: 67px;
+	background: #000928;
+	border-radius: 100px;
+	color: #ffffff;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 19px;
+}
+.googleIconDiv {
+	border-radius: 34px;
+	border: none;
+	margin-right: 25px;
+}
+.showPassword {
+	position: relative;
+	right: 50px;
+	top: 7px;
+}
+.signUpLink {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: #050505;
+	margin: 63px 0px;
+}
+
+/* Footer */
+.Footer {
+	background: #ffff;
+	height: 150px;
+	margin: 0rem -5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.FooterNav {
+	width: 100%;
+	padding: 0rem 5rem;
+}
+.FooterDivComponents {
+	display: flex;
+	justify-content: space-between;
+}
+.TextFooter {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 3.438rem;
+	color: #000928;
+	cursor: pointer;
+	margin: 0;
+	margin-top: 35px;
+}
+.FooterComponents {
+	display: flex;
+}
+.FootComponents {
+	display: flex;
+	gap: 2rem;
+	margin-top: 40px;
+}
+.FooterNavigation {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.1rem;
+	line-height: 1.125rem;
+	color: #000928;
+	cursor: pointer;
+}
+.hotLinePrs {
+	display: flex;
+	color: #000000;
+	align-items: center;
+}
+.hotLine {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-right: 20px;
+}
+.hotlineDiv {
+	display: flex;
+	flex-direction: column;
+}
+.hotLineP {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+}
+
+/* About */
+.AboutUs {
+	color: #ffffff;
+	margin-top: 215px;
+}
+.AboutUs1 h2 {
+	margin: -90px 0px 20px 0px;
+}
+.AboutUs1 {
+	background-color: #f1f1f1;
+	height: 620px;
+	display: flex;
+	margin: 0rem -5rem;
+	padding: 0rem 5rem;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #000928;
+}
+.aboutUsMain p {
+	width: 734px;
+}
+
+.AboutUs1 p {
+	width: 400px;
+}
+.aboutUsImg1 {
+	width: 616px;
+	height: 411px;
+	margin-left: 340px;
+}
+.aboutUsH2 {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 74px;
+}
+.aboutUsP {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+}
+.aboutUsMain {
+	margin-bottom: 215px;
+}
+.aboutUsCompany h2 {
+	width: 516px;
+	margin: 130px 159px 0px 0px;
+}
+.aboutUsCompany {
+	display: flex;
+}
+.aboutUsCompanyName {
+	display: flex;
+	gap: 40px;
+	margin-top: 216px;
+}
+.aboutUs2 p {
+	width: 437px;
+}
+.aboutUsH3 {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 41px;
+	color: #000928;
+}
+.aboutUsCard {
+	width: 407px;
+	height: 600px;
+	border-radius: 30px;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.Yryskeldi {
+	border-radius: 30px 30px 0px 0px;
+	margin-top: 25px;
+}
+
+.Command {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 80px;
+}
+
+/* ////CreateVacancy/////*/
+.createContainer {
+	width: 1194px;
+	height: 2199px;
+	background: #f4f4f4;
+	border-radius: 80px;
+	border: 1px solid #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 200px;
+}
+
+.createTitle1 {
+	margin: 0;
+	color: #f1f1f1;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 74px;
+	margin-top: 200px;
+}
+
+.createTitle2 {
+	color: #f1f1f1;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	width: 734px;
+	margin-bottom: 40px;
+}
+.createInputDiv {
+	display: flex;
+	flex-direction: column;
+	margin-left: 66px;
+	gap: 45px;
+}
+.createLogOut {
+	margin: 35px 0px 15px 80px;
+	cursor: pointer;
+}
+.typeInputPost {
+	background: #ececec;
+	border: 1px solid #000928;
+	border-radius: 30px;
+	width: 844px;
+	height: 70px;
+	font-size: large;
+	font-family: 'Ubuntu';
+	padding: 0 15px;
+}
+.typeInputDescription {
+	background: #ececec;
+	border: 1px solid #000928;
+	border-radius: 30px;
+	width: 844px;
+	height: 130px;
+	resize: none;
+	font-size: large;
+	font-family: 'Ubuntu';
+	padding: 0 15px;
+}
+.infoTitle {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 46px;
+	color: #000928;
+	margin-left: 66px;
+}
+
+.typeLabel {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	color: #f3801f;
+}
+.createButton {
+	width: 298px;
+	height: 70px;
+	background: #f3801f;
+	border-radius: 40px;
+	border: none;
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 37px;
+	color: #ffffff;
+	margin: 45px 0px 0px 66px;
+	cursor: pointer;
+}
+/* ////// Profile /////*/
+.profile {
+	font-family: 'Ubuntu';
+	margin-bottom: 20rem;
+	margin-top: 150px;
+	/* padding-left: 25px; */
+	background: gainsboro;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	padding: 15px;
+}
+
+.profileHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #000000;
+	padding-left: 15px;
+}
+
+.logOut {
+	cursor: pointer;
+	font-family: 'Ubuntu';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	color: #ffffff;
+	background-color: #cc0033;
+	padding: 0.25rem 0.75rem;
+	border-radius: 0.7rem;
+}
+
+.profileDetailsHeader {
+	display: flex;
+	justify-content: space-between;
+	max-width: 500px;
+	color: #000000;
+	padding-left: 13px;
+}
+
+.personalDetailsText {
+	font-weight: 600;
+}
+
+.changePersonalDetails {
+	cursor: pointer;
+	font-weight: 450;
+	color: #000000;
+	background: #00660f;
+	border-radius: 10px;
+	padding: 8px;
+}
+
+.profileCard {
+	border-radius: 1rem;
+	padding: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.2);
+	max-width: 500px;
+	color: #000000;
+}
+
+.profileDetails {
+	display: flex;
+	flex-direction: column;
+}
+
+.profileName,
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive,
+.profileNameActive {
+	all: unset;
+	margin: 0.3rem 0;
+	font-weight: 600;
+	width: 100%;
+}
+.profileNameActive {
+	background-color: rgba(44, 44, 44, 0.1);
+}
+
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive {
+	font-weight: 500;
+}
+.profileEmailActive {
+	background-color: rgba(44, 44, 44, 0.1);
+}
+
+.profileAddressActive {
+	background-color: rgba(44, 44, 44, 0.1);
+}
+
+/* //////////////////////Vacancy */
+.Vacancies {
+	margin-top: 150px;
+	display: flex;
+	/* justify-content: space-around; */
+	/* align-items: center;
+	align-content: center; */
+	flex-direction: column;
+	margin-bottom: 30px;
+	gap: 25px;
+}
+.company {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	color: #ffffff;
+}
+.companyParents {
+	display: flex;
+	align-items: center;
+	height: 150px;
+	width: 1280px;
+	border: 1px solid #f1f1f1;
+	border-radius: 20px;
+}
+.companyParents img {
+	margin: 0px 20px;
+}
+.Compan {
+	margin: 800px 0px;
+}
